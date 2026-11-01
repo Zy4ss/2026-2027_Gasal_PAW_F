@@ -1,0 +1,110 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #fff;
+    color: #333;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 16px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 500;
+    color: #3d7ea6;
+}
+
+/* ---------- Tombol ---------- */
+.btn {
+    display: inline-block;
+    padding: 5px 12px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn-kecil { padding: 4px 10px; font-size: 12px; }
+.btn-hijau { background: linear-gradient(#6aac3a, #4f8f27); border-color: #4a8523; }
+.btn-oranye { background: linear-gradient(#f07a1a, #d35400); border-color: #c24c00; }
+.btn-merah { background: linear-gradient(#d9303b, #b0151f); border-color: #9d1019; }
+.btn:hover { filter: brightness(0.9); }
+
+.form-inline { display: inline; margin: 0; }
+
+/* ---------- Tabel ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+th {
+    background: #d9edf7;
+    text-align: left;
+    padding: 9px 10px;
+    border: 1px solid #c5dfec;
+    font-size: 13px;
+}
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+tbody tr:nth-child(even) { background: #fafafa; }
+td.kosong { text-align: center; color: #888; padding: 24px; }
+
+/* ---------- Alert ---------- */
+.alert {
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+.alert-sukses { background: #dff0d8; border-color: #cfe6c3; color: #3c763d; }
+.alert-gagal  { background: #f2dede; border-color: #e6c3c6; color: #a94442; }
+
+/* ---------- Form ---------- */
+.form-data { margin-top: 30px; }
+.baris {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.baris label {
+    width: 220px;
+    padding-right: 20px;
+    text-align: right;
+    font-weight: bold;
+}
+.baris input[type="text"] {
+    padding: 7px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.baris input.lebar  { width: 400px; max-width: 100%; }
+.baris input.sedang { width: 300px; max-width: 100%; }
+.baris.tombol { padding-left: 220px; gap: 4px; }
+
+@media (max-width: 600px) {
+    .baris { flex-direction: column; align-items: flex-start; }
+    .baris label { width: auto; text-align: left; padding: 0 0 4px; }
+    .baris.tombol { padding-left: 0; flex-direction: row; }
+}
